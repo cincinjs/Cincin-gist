@@ -11,8 +11,8 @@ Resource            ${CURDIR}/../keywords/keywords.robot
 
 
 *** Variables ***
-${HOMEPAGE}         https://gist.github.com/
-${BROWSER}          chrome
+${HOMEPAGE}               https://gist.github.com/
+${BROWSER}                chrome
 
 # Gist
 ${DESCRIPTION}            Create public gist
@@ -47,7 +47,7 @@ User Delete An Existing Gist
   User Delete Gist
   Verify User Successfully Delete Gist
 
-User see list of gists
+User See List Of My Gists
   User Login With Valid Credentials
   User Navigate To My Gist List
   Verify User Able To Open My Gist List
