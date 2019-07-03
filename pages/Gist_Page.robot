@@ -7,6 +7,7 @@ ${txt_content_gist}           class=CodeMirror-code
 ${btn_save_gist}              name=gist[public]
 ${btn_edit_gist}              //a[@class="btn btn-sm"]
 ${btn_update_gist}            //*[@class="btn btn-primary"]
+${btn_delete_gist}            //*[@class="btn btn-sm btn-danger"]
 
 ${lbl_desc}                   //*[@itemprop="about"]
 ${lbl_filename}               //*[@class="user-select-contain gist-blob-name css-truncate-target"]

@@ -68,3 +68,12 @@ User Click Update Gist Button
 Verify User Successfully Edit Gist
   Wait Until Element Is Visible           ${lbl_desc}
   Element Should Contain                  ${lbl_content_gist}    ${EDIT_CONTENT}
+
+User Delete Gist
+  Wait Until Element Is Visible           ${btn_delete_gist}
+  Click Element                           ${btn_delete_gist}
+  Handle Alert                            action=ACCEPT     timeout=None
+
+Verify User Successfully Delete Gist
+  Wait Until Element Is Visible           ${msg_gist_deleted}
+  Element Text Should Be                  ${msg_gist_deleted}     ${text_deleted_massage}

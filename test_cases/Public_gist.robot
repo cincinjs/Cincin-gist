@@ -20,6 +20,9 @@ ${FILENAME}         public_gist.robot
 ${CONTENT}          content public gist
 ${EDIT_CONTENT}     (Edit)
 
+# Message
+${text_deleted_massage}   Gist deleted successfully.
+
 *** Test Cases ***
 User create a public gist
   User Login With Valid Credentials
@@ -35,3 +38,10 @@ User Edit An Existing Gist
   User Edit Existing Gist    ${EDIT_CONTENT}
   User Click Update Gist Button
   Verify User Successfully Edit Gist
+
+User Delete An Existing Gist
+  User Login With Valid Credentials
+  User Navigate To My Gist List
+  User Choose Existing Gist
+  User Delete Gist
+  Verify User Successfully Delete Gist

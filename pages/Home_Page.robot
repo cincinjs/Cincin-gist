@@ -7,3 +7,6 @@ ${btn_avatar_menu}        class=avatar
 
 # Avatar Menu
 ${menu_your_gist}         xpath=//*[@class="dropdown-item"][@data-ga-click="Header, go to your gists, text:your gists"]
+
+# Message
+${msg_gist_deleted}       id=js-flash-container
