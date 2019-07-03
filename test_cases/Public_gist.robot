@@ -18,6 +18,7 @@ ${BROWSER}          chrome
 ${DESCRIPTION}      Create public gist
 ${FILENAME}         public_gist.robot
 ${CONTENT}          content public gist
+${EDIT_CONTENT}     (Edit)
 
 *** Test Cases ***
 User create a public gist
@@ -25,4 +26,12 @@ User create a public gist
   User Navigate To Create Public Gist Page
   User Input All Fields    ${DESCRIPTION}    ${FILENAME}    ${CONTENT}
   User Click Save Gist Button
-  Verify User Successfully Save Gist
+  Verify User Successfully Save Gist    ${DESCRIPTION}    ${FILENAME}    ${CONTENT}
+
+User Edit An Existing Gist
+  User Login With Valid Credentials
+  User Navigate To My Gist List
+  User Choose Existing Gist
+  User Edit Existing Gist    ${EDIT_CONTENT}
+  User Click Update Gist Button
+  Verify User Successfully Edit Gist
