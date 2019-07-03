@@ -6,8 +6,6 @@ Resource            ${CURDIR}/../pages/Home_Page.robot
 Resource            ${CURDIR}/../pages/Login_Page.robot
 Resource            ${CURDIR}/../pages/Gist_Page.robot
 
-
-
 *** Keywords ***
 User Open Gist Github Page
   Open Browser                            ${HOMEPAGE}             ${BROWSER}
@@ -58,7 +56,7 @@ User Edit Existing Gist
   Wait Until Element Is Visible           ${btn_edit_gist}
   Click Element                           ${btn_edit_gist}
   Wait Until Element Is Visible           ${txt_desc_gist}
-  Input Text                              ${txt_content_gist}      ${EDIT_CONTENT}
+  Input Text                              ${txt_content_gist}     ${EDIT_CONTENT}
 
 User Click Update Gist Button
   Wait Until Element Is Visible           ${btn_update_gist}
@@ -67,7 +65,7 @@ User Click Update Gist Button
 
 Verify User Successfully Edit Gist
   Wait Until Element Is Visible           ${lbl_desc}
-  Element Should Contain                  ${lbl_content_gist}    ${EDIT_CONTENT}
+  Element Should Contain                  ${lbl_content_gist}     ${EDIT_CONTENT}
 
 User Delete Gist
   Wait Until Element Is Visible           ${btn_delete_gist}
@@ -77,3 +75,8 @@ User Delete Gist
 Verify User Successfully Delete Gist
   Wait Until Element Is Visible           ${msg_gist_deleted}
   Element Text Should Be                  ${msg_gist_deleted}     ${text_deleted_massage}
+
+Verify User Able To Open My Gist List
+  Wait Until Element Is Visible           ${lbl_all_gist_list}
+  Element Should Be Visible               ${lbl_all_gist_list}
+  Element Should Contain                  ${lbl_all_gist_list}    ${label_all_gist}

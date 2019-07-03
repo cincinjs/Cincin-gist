@@ -15,13 +15,14 @@ ${HOMEPAGE}         https://gist.github.com/
 ${BROWSER}          chrome
 
 # Gist
-${DESCRIPTION}      Create public gist
-${FILENAME}         public_gist.robot
-${CONTENT}          content public gist
-${EDIT_CONTENT}     (Edit)
+${DESCRIPTION}            Create public gist
+${FILENAME}               public_gist.robot
+${CONTENT}                Hello Shopee!
+${EDIT_CONTENT}           (Edit)
 
 # Message
 ${text_deleted_massage}   Gist deleted successfully.
+${label_all_gist}         All gists
 
 *** Test Cases ***
 User create a public gist
@@ -45,3 +46,8 @@ User Delete An Existing Gist
   User Choose Existing Gist
   User Delete Gist
   Verify User Successfully Delete Gist
+
+User see list of gists
+  User Login With Valid Credentials
+  User Navigate To My Gist List
+  Verify User Able To Open My Gist List
