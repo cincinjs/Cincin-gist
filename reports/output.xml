@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190703 11:43:42.867" generator="Robot 3.1.2 (Python 2.7.15 on win32)">
+<suite source="C:\Users\sc_id\Documents\GitHub\Cincin-gist\test_cases\Public_gist.robot" id="s1" name="Public gist">
+<test id="s1-t1" name="User create a public gist">
+<kw type="setup" name="User Open Gist Github Page" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190703 11:43:43.714" level="INFO">Opening browser 'chrome' to base url 'https://gist.github.com/'.</msg>
+<status status="PASS" endtime="20190703 11:44:20.802" starttime="20190703 11:43:43.714"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:44:20.802" starttime="20190703 11:43:43.713"></status>
+</kw>
+<kw name="User Login With Valid Credentials" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:44:20.829" starttime="20190703 11:44:20.803"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:44:20.829" level="INFO">Clicking element 'xpath=//a[@class="HeaderMenu-link no-underline mr-3"]'.</msg>
+<status status="PASS" endtime="20190703 11:45:06.264" starttime="20190703 11:44:20.829"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:45:06.291" starttime="20190703 11:45:06.264"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:06.291" level="INFO">Typing text 'test-runners' into text field 'id=login_field'.</msg>
+<status status="PASS" endtime="20190703 11:45:06.384" starttime="20190703 11:45:06.291"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:06.384" level="INFO">Typing text 'Jetstream001' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20190703 11:45:06.470" starttime="20190703 11:45:06.384"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submit_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:06.471" level="INFO">Clicking element 'name=commit'.</msg>
+<status status="PASS" endtime="20190703 11:45:14.855" starttime="20190703 11:45:06.471"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:45:14.855" starttime="20190703 11:44:20.802"></status>
+</kw>
+<kw name="User Navigate To Create Public Gist Page" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_add_new_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:45:14.885" starttime="20190703 11:45:14.856"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_add_new_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:14.886" level="INFO">Clicking element 'xpath=//*[@class="octicon octicon-plus"]'.</msg>
+<status status="PASS" endtime="20190703 11:45:43.545" starttime="20190703 11:45:14.885"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:45:43.545" starttime="20190703 11:45:14.856"></status>
+</kw>
+<kw name="User Input All Fields" library="keywords">
+<arguments>
+<arg>${DESCRIPTION}</arg>
+<arg>${FILENAME}</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_desc_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:45:43.574" starttime="20190703 11:45:43.546"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_desc_gist}</arg>
+<arg>${DESCRIPTION}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:43.574" level="INFO">Typing text 'Create public gist' into text field 'name=gist[description]'.</msg>
+<status status="PASS" endtime="20190703 11:45:43.690" starttime="20190703 11:45:43.574"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_filename_gist}</arg>
+<arg>${FILENAME}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:43.690" level="INFO">Typing text 'public_gist.robot' into text field 'name=gist[contents][][name]'.</msg>
+<status status="PASS" endtime="20190703 11:45:43.796" starttime="20190703 11:45:43.690"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_content_gist}</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:43.797" level="INFO">Typing text 'Hello Shopee!' into text field 'class=CodeMirror-code'.</msg>
+<status status="PASS" endtime="20190703 11:45:43.926" starttime="20190703 11:45:43.796"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:45:43.926" starttime="20190703 11:45:43.546"></status>
+</kw>
+<kw name="User Click Save Gist Button" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_save_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:45:43.948" starttime="20190703 11:45:43.927"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_save_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:45:43.967" starttime="20190703 11:45:43.948"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_save_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:43.967" level="INFO">Clicking element 'name=gist[public]'.</msg>
+<status status="PASS" endtime="20190703 11:45:51.708" starttime="20190703 11:45:43.967"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:45:51.708" starttime="20190703 11:45:43.927"></status>
+</kw>
+<kw name="Verify User Successfully Save Gist" library="keywords">
+<arguments>
+<arg>${DESCRIPTION}</arg>
+<arg>${FILENAME}</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lbl_desc}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:45:51.733" starttime="20190703 11:45:51.709"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${lbl_desc}</arg>
+<arg>${DESCRIPTION}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:51.735" level="INFO">Verifying element 'xpath=//*[@itemprop="about"]' contains exact text 'Create public gist'.</msg>
+<status status="PASS" endtime="20190703 11:45:51.751" starttime="20190703 11:45:51.733"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${lbl_filename}</arg>
+<arg>${FILENAME}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:51.751" level="INFO">Verifying element 'xpath=//*[@class="user-select-contain gist-blob-name css-truncate-target"]' contains exact text 'public_gist.robot'.</msg>
+<status status="PASS" endtime="20190703 11:45:51.767" starttime="20190703 11:45:51.751"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${lbl_content_gist}</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:51.767" level="INFO">Verifying element 'xpath=//*[@class="blob-code blob-code-inner js-file-line"]' contains exact text 'Hello Shopee!'.</msg>
+<status status="PASS" endtime="20190703 11:45:51.798" starttime="20190703 11:45:51.767"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:45:51.798" starttime="20190703 11:45:51.709"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190703 11:45:53.956" starttime="20190703 11:45:51.798"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:45:53.956" critical="yes" starttime="20190703 11:43:43.713"></status>
+</test>
+<test id="s1-t2" name="User Edit An Existing Gist">
+<kw type="setup" name="User Open Gist Github Page" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190703 11:45:53.956" level="INFO">Opening browser 'chrome' to base url 'https://gist.github.com/'.</msg>
+<status status="PASS" endtime="20190703 11:46:40.925" starttime="20190703 11:45:53.956"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:46:40.926" starttime="20190703 11:45:53.956"></status>
+</kw>
+<kw name="User Login With Valid Credentials" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:46:40.959" starttime="20190703 11:46:40.927"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:46:40.959" level="INFO">Clicking element 'xpath=//a[@class="HeaderMenu-link no-underline mr-3"]'.</msg>
+<status status="PASS" endtime="20190703 11:47:04.905" starttime="20190703 11:46:40.959"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:04.947" starttime="20190703 11:47:04.906"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:04.948" level="INFO">Typing text 'test-runners' into text field 'id=login_field'.</msg>
+<status status="PASS" endtime="20190703 11:47:05.097" starttime="20190703 11:47:04.948"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:05.097" level="INFO">Typing text 'Jetstream001' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20190703 11:47:05.211" starttime="20190703 11:47:05.097"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submit_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:05.212" level="INFO">Clicking element 'name=commit'.</msg>
+<status status="PASS" endtime="20190703 11:47:19.483" starttime="20190703 11:47:05.211"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:19.483" starttime="20190703 11:46:40.926"></status>
+</kw>
+<kw name="User Navigate To My Gist List" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_avatar_menu}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:19.511" starttime="20190703 11:47:19.485"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_avatar_menu}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:19.512" level="INFO">Clicking element 'class=avatar'.</msg>
+<status status="PASS" endtime="20190703 11:47:19.565" starttime="20190703 11:47:19.512"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${menu_your_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:19.605" starttime="20190703 11:47:19.565"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${menu_your_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:19.606" level="INFO">Clicking element 'xpath=//*[@class="dropdown-item"][@data-ga-click="Header, go to your gists, text:your gists"]'.</msg>
+<status status="PASS" endtime="20190703 11:47:22.761" starttime="20190703 11:47:19.605"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:22.762" starttime="20190703 11:47:19.484"></status>
+</kw>
+<kw name="User Choose Existing Gist" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lbl_list_filename}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:22.809" starttime="20190703 11:47:22.763"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_list_filename}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:22.809" level="INFO">Clicking element 'xpath=//*[contains(text(), "public_gist.robot")]'.</msg>
+<status status="PASS" endtime="20190703 11:47:25.596" starttime="20190703 11:47:22.809"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:25.596" starttime="20190703 11:47:22.762"></status>
+</kw>
+<kw name="User Edit Existing Gist" library="keywords">
+<arguments>
+<arg>${EDIT_CONTENT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_edit_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:25.634" starttime="20190703 11:47:25.597"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_edit_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:25.634" level="INFO">Clicking element 'xpath=//a[@class="btn btn-sm"]'.</msg>
+<status status="PASS" endtime="20190703 11:47:33.394" starttime="20190703 11:47:25.634"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_desc_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:33.434" starttime="20190703 11:47:33.394"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_content_gist}</arg>
+<arg>${EDIT_CONTENT}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:33.434" level="INFO">Typing text '(Edit)' into text field 'class=CodeMirror-code'.</msg>
+<status status="PASS" endtime="20190703 11:47:33.535" starttime="20190703 11:47:33.434"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:33.535" starttime="20190703 11:47:25.597"></status>
+</kw>
+<kw name="User Click Update Gist Button" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_update_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:33.558" starttime="20190703 11:47:33.536"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_update_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:33.578" starttime="20190703 11:47:33.559"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_update_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:33.578" level="INFO">Clicking element 'xpath=//*[@class="btn btn-primary"]'.</msg>
+<status status="PASS" endtime="20190703 11:47:38.290" starttime="20190703 11:47:33.578"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:38.291" starttime="20190703 11:47:33.535"></status>
+</kw>
+<kw name="Verify User Successfully Edit Gist" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lbl_desc}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:38.316" starttime="20190703 11:47:38.292"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${lbl_content_gist}</arg>
+<arg>${EDIT_CONTENT}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:38.339" level="INFO">Element 'xpath=//*[@class="blob-code blob-code-inner js-file-line"]' contains text '(Edit)'.</msg>
+<status status="PASS" endtime="20190703 11:47:38.339" starttime="20190703 11:47:38.316"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:38.339" starttime="20190703 11:47:38.291"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190703 11:47:40.464" starttime="20190703 11:47:38.339"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:40.465" critical="yes" starttime="20190703 11:45:53.956"></status>
+</test>
+<test id="s1-t3" name="User Delete An Existing Gist">
+<kw type="setup" name="User Open Gist Github Page" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:40.483" level="INFO">Opening browser 'chrome' to base url 'https://gist.github.com/'.</msg>
+<status status="PASS" endtime="20190703 11:47:53.325" starttime="20190703 11:47:40.482"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:47:53.325" starttime="20190703 11:47:40.482"></status>
+</kw>
+<kw name="User Login With Valid Credentials" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:47:53.359" starttime="20190703 11:47:53.327"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:47:53.360" level="INFO">Clicking element 'xpath=//a[@class="HeaderMenu-link no-underline mr-3"]'.</msg>
+<status status="PASS" endtime="20190703 11:48:07.565" starttime="20190703 11:47:53.360"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:07.592" starttime="20190703 11:48:07.566"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:07.592" level="INFO">Typing text 'test-runners' into text field 'id=login_field'.</msg>
+<status status="PASS" endtime="20190703 11:48:07.687" starttime="20190703 11:48:07.592"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:07.687" level="INFO">Typing text 'Jetstream001' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20190703 11:48:07.780" starttime="20190703 11:48:07.687"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submit_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:07.780" level="INFO">Clicking element 'name=commit'.</msg>
+<status status="PASS" endtime="20190703 11:48:17.376" starttime="20190703 11:48:07.780"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:48:17.376" starttime="20190703 11:47:53.326"></status>
+</kw>
+<kw name="User Navigate To My Gist List" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_avatar_menu}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:17.405" starttime="20190703 11:48:17.377"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_avatar_menu}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:17.405" level="INFO">Clicking element 'class=avatar'.</msg>
+<status status="PASS" endtime="20190703 11:48:17.457" starttime="20190703 11:48:17.405"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${menu_your_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:17.488" starttime="20190703 11:48:17.457"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${menu_your_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:17.489" level="INFO">Clicking element 'xpath=//*[@class="dropdown-item"][@data-ga-click="Header, go to your gists, text:your gists"]'.</msg>
+<status status="PASS" endtime="20190703 11:48:19.024" starttime="20190703 11:48:17.488"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:48:19.024" starttime="20190703 11:48:17.377"></status>
+</kw>
+<kw name="User Choose Existing Gist" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lbl_list_filename}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:19.053" starttime="20190703 11:48:19.025"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_list_filename}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:19.053" level="INFO">Clicking element 'xpath=//*[contains(text(), "public_gist.robot")]'.</msg>
+<status status="PASS" endtime="20190703 11:48:20.962" starttime="20190703 11:48:19.053"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:48:20.963" starttime="20190703 11:48:19.024"></status>
+</kw>
+<kw name="User Delete Gist" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_delete_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:20.992" starttime="20190703 11:48:20.963"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_delete_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:20.992" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm btn-danger"]'.</msg>
+<status status="PASS" endtime="20190703 11:48:21.047" starttime="20190703 11:48:20.992"></status>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>action=ACCEPT</arg>
+<arg>timeout=None</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:21.073" starttime="20190703 11:48:21.047"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:48:21.074" starttime="20190703 11:48:20.963"></status>
+</kw>
+<kw name="Verify User Successfully Delete Gist" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${msg_gist_deleted}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:48:23.706" starttime="20190703 11:48:21.076"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${msg_gist_deleted}</arg>
+<arg>${text_deleted_massage}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:23.707" level="INFO">Verifying element 'id=js-flash-container' contains exact text 'Gist deleted successfully.'.</msg>
+<status status="PASS" endtime="20190703 11:48:23.730" starttime="20190703 11:48:23.706"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:48:23.730" starttime="20190703 11:48:21.075"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190703 11:48:25.894" starttime="20190703 11:48:23.730"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:48:25.895" critical="yes" starttime="20190703 11:47:40.478"></status>
+</test>
+<test id="s1-t4" name="User See List Of My Gists">
+<kw type="setup" name="User Open Gist Github Page" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190703 11:48:25.899" level="INFO">Opening browser 'chrome' to base url 'https://gist.github.com/'.</msg>
+<status status="PASS" endtime="20190703 11:49:48.151" starttime="20190703 11:48:25.898"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:49:48.151" starttime="20190703 11:48:25.898"></status>
+</kw>
+<kw name="User Login With Valid Credentials" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:49:48.198" starttime="20190703 11:49:48.152"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:49:48.200" level="INFO">Clicking element 'xpath=//a[@class="HeaderMenu-link no-underline mr-3"]'.</msg>
+<status status="PASS" endtime="20190703 11:50:43.670" starttime="20190703 11:49:48.198"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:50:43.695" starttime="20190703 11:50:43.671"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:43.695" level="INFO">Typing text 'test-runners' into text field 'id=login_field'.</msg>
+<status status="PASS" endtime="20190703 11:50:43.782" starttime="20190703 11:50:43.695"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:43.782" level="INFO">Typing text 'Jetstream001' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20190703 11:50:43.866" starttime="20190703 11:50:43.782"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submit_signin}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:43.867" level="INFO">Clicking element 'name=commit'.</msg>
+<status status="PASS" endtime="20190703 11:50:53.093" starttime="20190703 11:50:43.866"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:50:53.093" starttime="20190703 11:49:48.152"></status>
+</kw>
+<kw name="User Navigate To My Gist List" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_avatar_menu}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:50:53.119" starttime="20190703 11:50:53.094"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_avatar_menu}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:53.119" level="INFO">Clicking element 'class=avatar'.</msg>
+<status status="PASS" endtime="20190703 11:50:53.170" starttime="20190703 11:50:53.119"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${menu_your_gist}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:50:53.202" starttime="20190703 11:50:53.170"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${menu_your_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:53.203" level="INFO">Clicking element 'xpath=//*[@class="dropdown-item"][@data-ga-click="Header, go to your gists, text:your gists"]'.</msg>
+<status status="PASS" endtime="20190703 11:50:57.421" starttime="20190703 11:50:53.202"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:50:57.422" starttime="20190703 11:50:53.094"></status>
+</kw>
+<kw name="Verify User Able To Open My Gist List" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lbl_all_gist_list}</arg>
+</arguments>
+<status status="PASS" endtime="20190703 11:50:57.451" starttime="20190703 11:50:57.423"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${lbl_all_gist_list}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:57.469" level="INFO">Element 'xpath=//*[@class="js-selected-navigation-item selected reponav-item"]' is displayed.</msg>
+<status status="PASS" endtime="20190703 11:50:57.470" starttime="20190703 11:50:57.451"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${lbl_all_gist_list}</arg>
+<arg>${label_all_gist}</arg>
+</arguments>
+<msg timestamp="20190703 11:50:57.494" level="INFO">Element 'xpath=//*[@class="js-selected-navigation-item selected reponav-item"]' contains text 'All gists'.</msg>
+<status status="PASS" endtime="20190703 11:50:57.494" starttime="20190703 11:50:57.470"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:50:57.494" starttime="20190703 11:50:57.423"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190703 11:50:59.618" starttime="20190703 11:50:57.496"></status>
+</kw>
+<status status="PASS" endtime="20190703 11:50:59.619" critical="yes" starttime="20190703 11:48:25.897"></status>
+</test>
+<status status="PASS" endtime="20190703 11:50:59.622" starttime="20190703 11:43:42.869"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Public gist" pass="4">Public gist</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
